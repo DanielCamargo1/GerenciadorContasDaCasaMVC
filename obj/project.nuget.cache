@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "QugMakOvb7b5m5cchxI7R4/YvkjPOnBgkb8y0etFJqYpys33ooW92rCcSJF9Y4JLZaQ240nOGHIgUDrmXsGReg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danid\\Desktop\\ContaHouse\\ContaHoueseMvc\\ContaHoueseMvc\\ContaHoueseMvc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danid\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
+    "C:\\Users\\danid\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\danid\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\danid\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\danid\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
