@@ -2,5 +2,12 @@
 {
     public class ContaModel
     {
+        public int Id { get; set; }
+        public string NomeConta { get; set; }
+        public string CódigoDeBarras { get; set; }
+        public DateTime Vencimento { get; set; }
+        public DateTime DataPublicacao { get; set; } = DateTime.Now;
+        public bool Situacao { get; set; } = false;
+        public double Valor { get; set; }
     }
 }

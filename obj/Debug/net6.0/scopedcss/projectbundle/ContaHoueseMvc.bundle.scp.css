@@ -1,0 +1,49 @@
+/* _content/ContaHoueseMvc/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-nbnl67ixqr] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-nbnl67ixqr] {
+  color: #0077cc;
+}
+
+.btn-primary[b-nbnl67ixqr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-nbnl67ixqr], .nav-pills .show > .nav-link[b-nbnl67ixqr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-nbnl67ixqr] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-nbnl67ixqr] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-nbnl67ixqr] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-nbnl67ixqr] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-nbnl67ixqr] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

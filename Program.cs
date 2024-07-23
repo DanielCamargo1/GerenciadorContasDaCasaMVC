@@ -1,3 +1,6 @@
+using ContaHoueseMvc.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ContaHoueseMvc
 {
     public class Program
@@ -5,6 +8,10 @@ namespace ContaHoueseMvc
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var connectionString = builder.Configuration.GetConnectionString("ConnectionMySql");
+
+            builder.Services.AddDbContext<ContaDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
