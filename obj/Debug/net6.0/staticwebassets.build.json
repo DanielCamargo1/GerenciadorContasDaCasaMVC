@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Spi9Avp2f+cWb7sdZp3IgEW6zForJxuoOdhqsgBW9B4=",
+  "Hash": "hmHSOVQbaoEjVzPIwl4XugZKf9uD4JxFmR7xII6UKrQ=",
   "Source": "ContaHoueseMvc",
   "BasePath": "_content/ContaHoueseMvc",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\danid\\Desktop\\ContaHouse\\ContaHoueseMvc\\ContaHoueseMvc\\wwwroot\\img\\ImagemFinancas.png",
+      "SourceId": "ContaHoueseMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danid\\Desktop\\ContaHouse\\ContaHoueseMvc\\ContaHoueseMvc\\wwwroot\\",
+      "BasePath": "_content/ContaHoueseMvc",
+      "RelativePath": "img/ImagemFinancas.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ImagemFinancas.png"
     },
     {
       "Identity": "C:\\Users\\danid\\Desktop\\ContaHouse\\ContaHoueseMvc\\ContaHoueseMvc\\wwwroot\\js\\site.js",
