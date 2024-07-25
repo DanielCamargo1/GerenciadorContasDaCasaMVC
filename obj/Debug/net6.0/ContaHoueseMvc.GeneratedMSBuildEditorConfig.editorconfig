@@ -18,12 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\danid\Desktop\ContaHouse\ContaHoueseMvc\ContaHoueseMvc
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/danid/Desktop/ContaHouse/ContaHoueseMvc/ContaHoueseMvc/Views/ContasEmAberto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFzRW1BYmVydG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/danid/Desktop/ContaHouse/ContaHoueseMvc/ContaHoueseMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/danid/Desktop/ContaHouse/ContaHoueseMvc/ContaHoueseMvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danid/Desktop/ContaHouse/ContaHoueseMvc/ContaHoueseMvc/Views/Pagas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/danid/Desktop/ContaHouse/ContaHoueseMvc/ContaHoueseMvc/Views/Shared/Error.cshtml]
