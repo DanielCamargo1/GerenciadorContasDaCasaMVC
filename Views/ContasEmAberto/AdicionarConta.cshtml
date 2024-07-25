@@ -1,0 +1,29 @@
+﻿@model ContaModel
+@{
+    ViewData["title"] = "Cadastrar Conta";
+}
+@{
+
+    <form method="post" asp-controller="ContasEmAberto" asp-action="AdicionarConta">
+        <div class="mb-3">
+            <label asp-for="NomeDaConta" class="form-label">Nome Da conta</label>
+            <input type="text" class="form-control" id="" >
+        </div>
+        <div class="mb-3">
+            <label asp-for="Vencimento" class="form-label">Vencimento</label>
+            <input type="date" class="form-control" id="">
+        </div>
+        <div class="mb-3 form-check">
+            <label asp-for="Valor" class="form-label">Valor</label>
+            <input type="number" class="form-control" id="">
+        </div>
+        <div class="form-group">
+            <label for="imageUpload">Selecione a imagem do Código De Barras</label>
+            <input type="file" class="form-control-file" id="imageUpload">
+        </div>
+        <div class="d-flex gap-5 mt-5">
+            <button type="submit" class="btn btn-success w-50">Cadastrar</button>
+            <a class="btn btn-primary w-50" asp-controller="AdicionarConta" asp-action="Index">Voltar</a>
+        </div>
+    </form>
+}

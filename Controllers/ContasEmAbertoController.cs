@@ -1,4 +1,5 @@
 ﻿using ContaHoueseMvc.Data;
+using ContaHoueseMvc.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContaHoueseMvc.Controllers
@@ -15,6 +16,19 @@ namespace ContaHoueseMvc.Controllers
         public  IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult AdicionarConta()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AdicionarConta(ContaModel conta)
+        {
+            _context.Contas.Add(conta);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
