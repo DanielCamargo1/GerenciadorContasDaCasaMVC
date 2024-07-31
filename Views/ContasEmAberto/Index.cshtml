@@ -1,9 +1,29 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<ContaModel>
 @{
     <div class="d-flex  justify-content-between align-items-center p-3 ">
         <h1>Aqui esta as contas em Aberto</h1>
         <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AdicionarConta"> Nova Conta</a>
     </div>
+
+    @if(Model != null)
+    {
+        
+        @foreach(var item in Model)
+        {
+            <tr>
+              <th scope="col">Nome da Conta</th>
+              <th scope="col">Vencimento</th>
+              <th scope="col">Valor</th>
+              <th scope="col">btn</th>
+            </tr>
+
+            <tr>
+              <td>@item.NomeDaConta</td>
+              <td>@item.Vencimento</td>
+              <td>@item.Valor</td>
+              <td>mdo</td>
+            </tr>
+
+        }
+    }   
 }

@@ -24,12 +24,21 @@ namespace ContaHoueseMvc.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionarConta(ContaModel conta)
+        public IActionResult AdicionarConta([FromForm] ContaModel conta)
         {
+            //var path = @"C:\Users\danid\Desktop\contasImg\";
+
+            //if (conta.CodigoDeBarras == null)
+            //    return BadRequest();
+
+            //using (var stream = new FileStream(path + conta.NomeDaConta, FileMode.Create, FileAccess.Write))
+            //{
+            //    conta.CodigoDeBarras.CopyTo(stream);
+            //}
+
             _context.Contas.Add(conta);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-
     }
 }
