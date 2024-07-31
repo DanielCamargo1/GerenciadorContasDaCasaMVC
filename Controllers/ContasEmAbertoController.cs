@@ -37,7 +37,7 @@ namespace ContaHoueseMvc.Controllers
             //}
 
             _context.Contas.Add(conta);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
     }
