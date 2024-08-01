@@ -26,19 +26,13 @@ namespace ContaHoueseMvc.Controllers
         [HttpPost]
         public IActionResult AdicionarConta([FromForm] ContaModel conta)
         {
-            //var path = @"C:\Users\danid\Desktop\contasImg\";
-
-            //if (conta.CodigoDeBarras == null)
-            //    return BadRequest();
-
-            //using (var stream = new FileStream(path + conta.NomeDaConta, FileMode.Create, FileAccess.Write))
-            //{
-            //    conta.CodigoDeBarras.CopyTo(stream);
-            //}
-
-            _context.Contas.Add(conta);
-            _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            { 
+                _context.Contas.Add(conta);
+                _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return BadRequest("A model não é valida");
         }
     }
 }

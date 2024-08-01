@@ -5,30 +5,29 @@
         <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AdicionarConta"> Nova Conta</a>
     </div>
 
-    
+
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Nome Da Conta</th>
-                <th scope="col">Vencimento</th>
+                <th scope="col">Conta</th>
                 <th scope="col">Valor</th>
-                <th scope="col">button</th>
+                <th scope="col">Vencimento</th>
             </tr>
         </thead>
-        <tbody>
 
         @if(Model != null)
-        {
-        
-            @foreach(var item in Model)
             {
-                <tr>
-                  <td>@item.NomeDaConta</td>
-                  <td>@item.Vencimento</td>
-                  <td>@item.Valor</td>
-                  <td>mdo</td>
-                </tr>
+        <tbody>
+                @foreach(var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.NomeDaConta</th>
+                            <td>@item.Valor</td>
+                            <td>@item.Vencimento</td>
+                    
+                        </tr>
+                    }  
+        </tbody>
             }
-        }   
-  </table>
+    </table>
 }
