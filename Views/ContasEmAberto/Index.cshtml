@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<ContaModel>
 @{
     <div class="d-flex  justify-content-between align-items-center p-3 ">
-        <h1>Aqui esta as contas em Aberto</h1>
-        <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AdicionarConta"> Nova Conta</a>
+        <h1>Contas em Aberto</h1>
+        <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AdicionarConta"> Cadastrar Conta</a>
     </div>
 
 
@@ -16,18 +16,17 @@
         </thead>
 
         @if(Model != null)
-            {
-        <tbody>
+        {
+            <tbody>
                 @foreach(var item in Model)
-                    {
-                        <tr>
-                            <th scope="row">@item.NomeDaConta</th>
-                            <td>@item.Valor</td>
-                            <td>@item.Vencimento</td>
-                    
-                        </tr>
-                    }  
-        </tbody>
-            }
+                {
+                    <tr class="table-danger">
+                        <th scope="row">@item.NomeDaConta</th>
+                        <td>@item.Valor</td>
+                        <td>@item.Vencimento</td>
+                    </tr>
+                }              
+            </tbody>
+        }
     </table>
 }

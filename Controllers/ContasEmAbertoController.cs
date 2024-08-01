@@ -24,7 +24,7 @@ namespace ContaHoueseMvc.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionarConta([FromForm] ContaModel conta)
+        public IActionResult AdicionarConta(ContaModel conta)
         {
             if(ModelState.IsValid)
             { 
