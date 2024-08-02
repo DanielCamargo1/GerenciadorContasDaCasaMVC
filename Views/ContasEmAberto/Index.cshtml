@@ -14,25 +14,25 @@
 
     @if (Model != null && Model.Any())
     {
-        <table class="table table-striped table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Nome Da Conta</th>
-                    <th scope="col">Vencimento</th>
-                    <th scope="col">Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var conta in Model)
-                {
-                    <tr>
-                        <td>@conta.NomeDaConta</td>
-                        <td>@conta.Vencimento.ToString("dd/MM/yyyy")</td>
-                        <td>@conta.Valor.ToString("C")</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <div class="row">
+            @foreach (var conta in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h3 class="card-title">@conta.NomeDaConta</h3>
+                            <p class="card-text">
+                                <strong>Vencimento:</strong> @conta.Vencimento.ToString("dd/MM/yyyy")<br>
+                                <strong>Valor:</strong> @conta.Valor.ToString("C")
+                            </p>
+                            <a href="#" class="btn btn-success">Pagar</a>
+                            <a href="#" class="btn btn-warning">Atualizar</a> 
+                            <a href="#" class="btn btn-danger">Excluir</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
     }
     else
     {
