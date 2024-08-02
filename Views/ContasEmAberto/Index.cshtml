@@ -6,7 +6,7 @@
 
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="display-4">Contas em Aberto</h1>
+        <strong> <h1 class="display-4">CONTAS EM ABERTO </h1>  </strong>
         <a class="btn btn-success" asp-controller="ContasEmAberto" asp-action="AdicionarConta">
             <i class="fas fa-plus"></i> Cadastrar Conta
         </a>
@@ -25,14 +25,15 @@
                                 <strong>Vencimento:</strong> @conta.Vencimento.ToString("dd/MM/yyyy")<br>
                                 <strong>Valor:</strong> @conta.Valor.ToString("C")
                             </p>
-                            <a href="#" class="btn btn-success">Pagar</a>
-                            <a href="#" class="btn btn-warning">Atualizar</a> 
-                            <a href="#" class="btn btn-danger">Excluir</a>
+                            <a asp-action="PagarConta" class="btn btn-success">Pagar</a>
+                            <a asp-action="EditarConta" class="btn btn-warning">Atualizar</a>
+                            <a asp-action="ExcluirConta" class="btn btn-danger">Excluir</a>
 
                         </div>
                     </div>
                 </div>
             }
+        </div>
     }
     else
     {
