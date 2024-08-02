@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContaHoueseMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be84f3804234c3d8edae6bc1133f67a2d74259c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75775fbc085b266dcff7c089fe577fc7024efb88")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContaHoueseMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContaHoueseMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
