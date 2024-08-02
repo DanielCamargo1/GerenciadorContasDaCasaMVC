@@ -1,18 +1,33 @@
-﻿@model IEnumerable<ContaModel>
+﻿@model IEnumerable<ContaHoueseMvc.Models.ContaModel>
+
 @{
-    <div class="d-flex  justify-content-between align-items-center p-3 ">
-        <h1>Contas em Aberto</h1>
-        <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AddConta"> Cadastrar Conta</a>
-    </div>
+    ViewData["Title"] = "Contas em Aberto";
+}
 
-    @if(Model != null)
-    {
-        @foreach(var conta in Model)
-        {
-           <p>@conta.NomeDaConta</p>
-           <p>@conta.Vencimento</p>
-           <p>@conta.Valor</p>
-        }
-    }
+<div class="d-flex justify-content-between align-items-center p-3">
+    <h1>Contas em Aberto</h1>
+    <a class="btn btn-success mx-6" asp-controller="ContasEmAberto" asp-action="AdicionarConta">Cadastrar Conta</a>
+</div>
 
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome Da Conta</th>
+                <th>Vencimento</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var conta in Model)
+            {
+                <tr>
+                    <td>@conta.NomeDaConta</td>
+                    <td>@conta.Vencimento.ToString("dd/MM/yyyy")</td>
+                    <td>@conta.Valor.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
