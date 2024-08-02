@@ -17,7 +17,7 @@ namespace ContaHoueseMvc.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult AdicionarConta()
         {
             return View();
@@ -26,13 +26,13 @@ namespace ContaHoueseMvc.Controllers
         [HttpPost]
         public IActionResult AdicionarConta(ContaModel conta)
         {
-            if(ModelState.IsValid)
-            { 
-                _context.Contas.Add(conta);
-                _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+            if(!ModelState.IsValid)
+            {
+                return BadRequest("A model não é valida");
             }
-            return BadRequest("A model não é valida");
+            _context.Contas.Add(conta);
+            _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
     }
 }
