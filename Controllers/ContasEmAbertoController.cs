@@ -1,6 +1,7 @@
 ﻿using ContaHoueseMvc.Data;
 using ContaHoueseMvc.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace ContaHoueseMvc.Controllers
 {
@@ -13,10 +14,12 @@ namespace ContaHoueseMvc.Controllers
             _context = context;
         }
 
-        public  IActionResult Index()
+        public IActionResult Index()
         {
-            return View();
+            var contas = _context.Contas.ToList();
+            return View(contas);
         }
+
         [HttpGet]
         public IActionResult AdicionarConta()
         {
@@ -26,12 +29,12 @@ namespace ContaHoueseMvc.Controllers
         [HttpPost]
         public IActionResult AdicionarConta(ContaModel conta)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return BadRequest("A model não é valida");
+                return View(conta);
             }
             _context.Contas.Add(conta);
-            _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
     }
