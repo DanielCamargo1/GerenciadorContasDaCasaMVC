@@ -32,17 +32,30 @@ namespace ContaHoueseMvc.Controllers
         {
             if (id == null || id == 0)
             {
-                return NotFound();
+                return NotFound("O porblema esta no id recebido! Entre em contato com o Desenvolvedor");
             }
-
-            var doacao = _context.Contas.FirstOrDefault(x => x.Id == id);
-
-            if (doacao == null)
+            var conta = _context.Contas.Find(id);
+            if (conta == null)
             {
                 return NotFound();
             }
-            return View(doacao);
+            return View(conta);
+        }
 
+        [HttpGet]
+
+        public IActionResult EditarConta(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound("O porblema esta no id recebido! Entre em contato com o Desenvolvedor");
+            }
+            var conta = _context.Contas.Find(id);
+            if (conta == null)
+            {
+                return NotFound();
+            }
+            return View(conta);
         }
 
         [HttpPost]
@@ -56,12 +69,25 @@ namespace ContaHoueseMvc.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+      
+        [HttpPost]
+
+        public IActionResult EditarConta( ContaModel conta)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Contas.Update(conta);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(conta);
+        }
 
         [HttpPost]
-        public IActionResult ExcluirConta( ContaModel conta)
+        public IActionResult ExcluirConta(ContaModel conta)
         {
 
-            if(conta != null)
+            if (conta != null)
             {
                 _context.Contas.Remove(conta);
                 _context.SaveChanges();
@@ -69,5 +95,6 @@ namespace ContaHoueseMvc.Controllers
             }
             return NotFound();
         }
+
     }
 }
