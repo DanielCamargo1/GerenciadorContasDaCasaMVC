@@ -12,8 +12,11 @@ namespace ContaHoueseMvc.Controllers
         }
 
         public IActionResult Index()
-        {   
-            return View();
+        {
+            var contasPagas = _context.Contas.Where(c => c.Situacao).ToList();
+            return View(contasPagas);
         }
+
+
     }
 }

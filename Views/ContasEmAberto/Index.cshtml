@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContaHoueseMvc.Models.ContaModel>
+﻿@model IEnumerable<ContaModel>
 
 @{
     ViewData["Title"] = "Contas em Aberto";
@@ -28,7 +28,6 @@
                             <a asp-action="PagarConta" class="btn btn-success" asp-route-id="@conta.Id">Pagar</a>
                             <a asp-action="EditarConta" class="btn btn-warning" asp-route-id="@conta.Id">Atualizar</a>
                             <a asp-action="ExcluirConta" class="btn btn-danger" asp-route-id="@conta.Id">Excluir</a>
-
                         </div>
                     </div>
                 </div>

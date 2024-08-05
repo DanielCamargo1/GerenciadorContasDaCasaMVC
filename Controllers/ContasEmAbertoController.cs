@@ -58,6 +58,12 @@ namespace ContaHoueseMvc.Controllers
             return View(conta);
         }
 
+        [HttpGet]
+        public IActionResult PagarConta()
+        {   
+            return View("Index", "Pagas");
+        }
+
         [HttpPost]
         public IActionResult AdicionarConta(ContaModel conta)
         {
@@ -71,7 +77,6 @@ namespace ContaHoueseMvc.Controllers
         }
       
         [HttpPost]
-
         public IActionResult EditarConta( ContaModel conta)
         {
             if (ModelState.IsValid)
@@ -93,6 +98,22 @@ namespace ContaHoueseMvc.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult PagarConta(ContaModel conta)
+        {
+            var contaParaPagar = _context.Contas.Find(conta.Id);
+            if (contaParaPagar != null)
+            {
+                contaParaPagar.Situacao = true;
+                _context.SaveChanges();
+ 
+                var contasPagas = _context.Contas.Where(c => c.Situacao).ToList();
+                return View("Views/Pagas/Index", contasPagas);
+            }
+
             return NotFound();
         }
 
