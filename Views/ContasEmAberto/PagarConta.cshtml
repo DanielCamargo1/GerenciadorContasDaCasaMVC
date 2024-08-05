@@ -1,13 +1,12 @@
-﻿@model IEnumerable<ContaHoueseMvc.Models.ContaModel>
+﻿@model IEnumerable<ContaModel>
 
 @{
-    ViewData["Title"] = "Contas em Aberto";
+    ViewData["Title"] = "Contas Pagas";
 }
 
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <strong> <h1 class="display-4">CONTAS PAGAS</h1>  </strong>
-       
+         <h1 class="display-4">CONTAS PAGAS</h1>  
     </div>
 
     @if (Model != null && Model.Any())
@@ -15,7 +14,7 @@
         <div class="row">
             @foreach (var conta in Model)
             {
-                @if(conta.Situacao == true)
+                @if (conta.Situacao == true)
                 {
                     <div class="col-md-4 mb-4">
                         <div class="card">
@@ -25,7 +24,7 @@
                                     <strong>Vencimento:</strong> @conta.Vencimento.ToString("dd/MM/yyyy")<br>
                                     <strong>Valor:</strong> @conta.Valor.ToString("C")
                                 </p>>
-                               <p>Paga!</p>
+                                <p>Paga!</p>
                             </div>
                         </div>
                     </div>
