@@ -59,11 +59,9 @@ namespace ContaHoueseMvc.Controllers
         }
 
         [HttpGet]
-        public IActionResult PagarConta()
+        public IActionResult ContasPagas()
         {
-            ContaModel conta = new ContaModel();
-            conta.Situacao = true;
-            return View("Index", "Pagas");
+            return View();
         }
 
         [HttpPost]
