@@ -60,7 +60,9 @@ namespace ContaHoueseMvc.Controllers
 
         [HttpGet]
         public IActionResult PagarConta()
-        {   
+        {
+            ContaModel conta = new ContaModel();
+            conta.Situacao = true;
             return View("Index", "Pagas");
         }
 
@@ -104,16 +106,11 @@ namespace ContaHoueseMvc.Controllers
         [HttpPost]
         public IActionResult PagarConta(ContaModel conta)
         {
-            var contaParaPagar = _context.Contas.Find(conta.Id);
-            if (contaParaPagar != null)
+            if(conta != null)
             {
-                contaParaPagar.Situacao = true;
-                _context.SaveChanges();
- 
-                var contasPagas = _context.Contas.Where(c => c.Situacao).ToList();
-                return View("Views/Pagas/Index", contasPagas);
+                conta.Situacao = true;
+                return View("Index", "Pagas");
             }
-
             return NotFound();
         }
 
