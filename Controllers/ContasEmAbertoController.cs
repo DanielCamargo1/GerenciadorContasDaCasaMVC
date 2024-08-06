@@ -116,7 +116,7 @@ namespace ContaHoueseMvc.Controllers
             {
                 conta.Situacao = true;
                 Pagas.Add(conta);
-                return View("Index", "Pagas");
+                return View("Index");
             }
             return NotFound();
         }

@@ -17,20 +17,23 @@
         <div class="row">
             @foreach (var conta in Model)
             {
-                <div class="col-md-4 mb-4" >
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">@conta.NomeDaConta</h3>
-                            <p class="card-text">
-                                <strong>Vencimento:</strong> @conta.Vencimento.ToString("dd/MM/yyyy")<br>
-                                <strong>Valor:</strong> @conta.Valor.ToString("C")
-                            </p>
-                            <a asp-action="PagarConta" class="btn btn-success" asp-route-id="@conta.Id">Pagar</a>
-                            <a asp-action="EditarConta" class="btn btn-warning" asp-route-id="@conta.Id">Atualizar</a>
-                            <a asp-action="ExcluirConta" class="btn btn-danger" asp-route-id="@conta.Id">Excluir</a>
+                @if(conta.Situacao == false)
+                {
+                    <div class="col-md-4 mb-4" >
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">@conta.NomeDaConta</h3>
+                                <p class="card-text">
+                                    <strong>Vencimento:</strong> @conta.Vencimento.ToString("dd/MM/yyyy")<br>
+                                    <strong>Valor:</strong> @conta.Valor.ToString("C")
+                                </p>
+                                <a asp-action="PagarConta" class="btn btn-success" asp-route-id="@conta.Id">Pagar</a>
+                                <a asp-action="EditarConta" class="btn btn-warning" asp-route-id="@conta.Id">Atualizar</a>
+                                <a asp-action="ExcluirConta" class="btn btn-danger" asp-route-id="@conta.Id">Excluir</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             }
         </div>
     }
