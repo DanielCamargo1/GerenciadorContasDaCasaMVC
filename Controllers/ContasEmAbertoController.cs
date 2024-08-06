@@ -14,6 +14,8 @@ namespace ContaHoueseMvc.Controllers
             _context = context;
         }
 
+        public List<ContaModel> Pagas = new List<ContaModel>();
+
         public IActionResult Index()
         {
             var contas = _context.Contas.ToList();
@@ -59,7 +61,7 @@ namespace ContaHoueseMvc.Controllers
         }
 
         [HttpGet]
-        public IActionResult ContasPagas()
+        public IActionResult ContasPagas()  
         {
             return View();
         }
@@ -107,6 +109,7 @@ namespace ContaHoueseMvc.Controllers
             if(conta != null)
             {
                 conta.Situacao = true;
+                Pagas.Add(conta);
                 return View("Index", "Pagas");
             }
             return NotFound();
