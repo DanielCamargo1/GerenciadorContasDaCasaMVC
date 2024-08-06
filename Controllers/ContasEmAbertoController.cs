@@ -61,6 +61,12 @@ namespace ContaHoueseMvc.Controllers
         }
 
         [HttpGet]
+        public IActionResult PagarConta()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult ContasPagas()  
         {
             return View();

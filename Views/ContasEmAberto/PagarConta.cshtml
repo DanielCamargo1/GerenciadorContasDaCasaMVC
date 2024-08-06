@@ -1,0 +1,21 @@
+﻿@model ContaModel
+@{
+    ViewData["title"] = "Pagar Conta";
+}
+<div class="mb-5 text-center">
+    <h1>Pague a conta</h1>
+</div>
+
+<form method="post" asp-action="ExcluirConta">
+    <input type="hidden" asp-for="Id" />
+
+        @* Código De Barras*@
+
+        <h2>Código de barras</h2>
+
+        
+    <div class="d-flex gap-5 mt-5">
+        <button type="submit" class="btn btn-success w-50" asp-action="PagarConta">Pago</button>
+        <a class="btn btn-primary w-50" asp-action="Index">Voltar</a>
+    </div>
+</form>
