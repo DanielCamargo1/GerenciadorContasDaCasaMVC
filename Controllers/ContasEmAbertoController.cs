@@ -108,15 +108,19 @@ namespace ContaHoueseMvc.Controllers
             }
             return NotFound();
         }
-
+        2
         [HttpPost]
         public IActionResult PagarConta(ContaModel conta)
         {
             if(conta != null)
             {
-                conta.Situacao = true;
-                Pagas.Add(conta);
-                return View("Index");
+                var situacao = conta.Situacao;
+                if(situacao == false)
+                {
+                    situacao = true;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
             return NotFound();
         }
